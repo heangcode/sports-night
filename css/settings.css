@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +12,8 @@ body {
   min-height: 100vh;
   background: #000814;
 }
-h1 {
-   color : white ; 
-}
 
+/* Sidebar Styles */
 .sidebar {
   position: fixed;
   top: 0;
@@ -23,23 +22,22 @@ h1 {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #04090f;
+  background: #001d3d;
   padding: 25px 20px;
   transition: all 0.4s ease;
 }
 
-.sidebar .sidebar-header {
+.sidebar__header {
   display: flex;
   align-items: center;
-  
 }
 
-.sidebar .sidebar-header img {
+.sidebar__header img {
   width: 60px;
   object-fit: cover;
 }
 
-.sidebar .sidebar-header h2 {
+.sidebar__header h2 {
   color: #fff;
   font-size: 1.25rem;
   font-weight: 600;
@@ -47,25 +45,7 @@ h1 {
   margin-left: 23px;
 }
 
-.sidebar-links .menu-separator {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 1px;
-  transform: scaleX(1);
-  transform: translateY(-50%);
-  background: #101125;
-  transform-origin: right;
-  transition-delay: 0.2s;
-}
-
-.sidebar:hover .sidebar-links .menu-separator {
-  transition-delay: 0s;
-  transform: scaleX(0);
-}
-
-.sidebar-links {
+.sidebar__links {
   list-style: none;
   margin-top: 20px;
   height: 80%;
@@ -73,11 +53,11 @@ h1 {
   scrollbar-width: none;
 }
 
-.sidebar-links::-webkit-scrollbar {
+.sidebar__links::-webkit-scrollbar {
   display: none;
 }
 
-.sidebar-links li a {
+.sidebar__links li a {
   display: flex;
   align-items: center;
   gap: 0 20px;
@@ -90,7 +70,7 @@ h1 {
   transition: 0.2s ease;
 }
 
-.sidebar-links li a:hover {
+.sidebar__links li a:hover {
   color: #161a2d;
   background: #ffc300;
   border-radius: 16px;
@@ -104,65 +84,65 @@ h1 {
   height: 97.5vh;
   background-color: black;
 }
-.box1{
+.box1 {
   width: 100%;
   height: 17%;
   color: white;
 }
-.main-content .box1 h1{
+.main-content .box1 h1 {
   padding-top: 25px;
   padding-left: 20px;
   margin: 0;
   font-size: 48px;
 }
-.main-content .box1 p{
+.main-content .box1 p {
   padding-top: 7px;
   padding-left: 20px;
   margin: 0;
   font-size: 18px;
 }
-.main-content .box2{
+.main-content .box2 {
   width: 96.5%;
   border-radius: 9px;
   margin: auto;
 }
-.main-content .box2 .pro{
+.main-content .box2 .pro {
   width: 90%;
   margin: auto;
   height: 145px;
   display: flex;
   border-bottom: 1px solid white;
 }
-.main-content .box2 .pro .pic{
+.main-content .box2 .pro .pic {
   width: 28%;
   height: 85%;
   padding: 10px 0;
   display: flex;
   justify-content: center;
 }
-.main-content .box2 .pro .pic img{
+.main-content .box2 .pro .pic img {
   width: 50%;
   height: 100%;
   object-fit: cover;
   border-radius: 50% !important;
 }
-.main-content .box2 .pro .des{
+.main-content .box2 .pro .des {
   width: 65%;
   height: 30%;
   padding: 10px 0;
   color: white;
 }
-.main-content .box2 .pro .des h1{
+.main-content .box2 .pro .des h1 {
   margin: 0;
   padding-top: 10px;
 }
-.main-content .box2 .pro .des p{
+.main-content .box2 .pro .des p {
   margin: 0;
   padding-top: 5px;
   padding-bottom: 12px;
   color: rgb(186, 186, 186);
 }
-.main-content .box2 .pro .des button{
+.main-content .box2 .pro .des button {
   background-color: #66671a;
   color: white;
   padding: 4px 9px;
@@ -170,10 +150,10 @@ h1 {
   border-radius: 4px;
   cursor: pointer;
 }
-.main-content .box2 .pro .des button:hover{
+.main-content .box2 .pro .des button:hover {
   background-color: #7d7d55;
 }
-.main-content .box2 .item{
+.main-content .box2 .item {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -183,7 +163,7 @@ h1 {
   box-sizing: border-box;
   gap: 80px;
 }
-.main-content .box2 .item .item1{
+.main-content .box2 .item .item1 {
   width: 45%;
   height: 300px;
   padding: 50px;
@@ -193,31 +173,31 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
 }
-.main-content .box2 .item .item1:hover{
+.main-content .box2 .item .item1:hover {
   background-color: rgba(255, 255, 255, 0.285);
 }
-.main-content .box2 .item .item1 .imgbox{
+.main-content .box2 .item .item1 .imgbox {
   width: 100%;
   height: 57%;
 }
-.main-content .box2 .item .item1 .imgbox img{
+.main-content .box2 .item .item1 .imgbox img {
   width: 20%;
   margin-top: 10px;
   margin-left: 39%;
   object-fit: cover;
 }
-.main-content .box2 .item .item1 h1{
+.main-content .box2 .item .item1 h1 {
   color: white;
   margin: 0;
   font-size: 29px;
   padding-bottom: 5px;
 }
-.main-content .box2 .item .item1 p{
+.main-content .box2 .item .item1 p {
   color: rgb(176, 176, 176);
   margin: 0;
   padding-bottom: 5px;
 }
-.main-content .box2 .item .item1 .btn{
+.main-content .box2 .item .item1 .btn {
   width: 35%;
   margin-left: 65%;
   padding: 6px 0;
@@ -225,25 +205,25 @@ h1 {
   color: white;
   background-color: #24327d;
 }
-.main-content .box2 .item .item1 .btn span{
+.main-content .box2 .item .item1 .btn span {
   border: 2px solid #021473;
   padding: 5px 7px;
   border-radius: 50%;
   margin: 0;
 }
-.main-content.box2 .item .item1 .btn:hover{
+.main-content.box2 .item .item1 .btn:hover {
   background-color: #151e4d;
   cursor: pointer;
 }
-.main-content .img{
+.main-content .img {
   width: 100%;
   margin-top: 40px;
 }
-.main-content .img img{
+.main-content .img img {
   width: 100%;
   object-fit: cover;
 }
-.main-content .box2 .item .item3{
+.main-content .box2 .item .item3 {
   width: 100%;
   height: 300px;
   padding: 50px;
@@ -254,28 +234,27 @@ h1 {
   display: flex;
   transition: 0.3s;
 }
-.main-content .box2 .item .item3:hover{
+.main-content .box2 .item .item3:hover {
   background-color: rgba(255, 255, 255, 0.285);
 }
-.main-content .box2 .item .item3 .imgbox{
+.main-content .box2 .item .item3 .imgbox {
   height: 100%;
   width: 47%;
 }
-.main-content .box2 .item .item3 .imgbox img{
+.main-content .box2 .item .item3 .imgbox img {
   width: 50%;
   margin-left: 10%;
   object-fit: cover;
 }
-.main-content .box2 .item .item3 h1{
+.main-content .box2 .item .item3 h1 {
   color: white;
-width: 100%;
- margin-top: 20px;
+  width: 100%;
+  margin-top: 20px;
   font-size: 40px;
   padding-bottom: 5px;
 }
-.main-content .box2 .item .item3 p{
+.main-content .box2 .item .item3 p {
   color: rgb(176, 176, 176);
   font-size: 22px;
   padding-bottom: 5px;
 }
-
