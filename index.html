@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/logo.png">
     <title>Sports Night</title>
     <!-- Linking Google Font Link For Icons -->
     <link rel="stylesheet"
@@ -13,11 +14,11 @@
 
 <body>
     <aside class="sidebar">
-        <div class="sidebar-header">
+        <div class="sidebar__header">
             <img src="./images/logo.png" alt="logo" />
             <h2>Sports Night</h2>
         </div>
-        <ul class="sidebar-links">
+        <ul class="sidebar__links">
             <li>
                 <a href="/">
                     <span class="material-symbols-outlined">
@@ -57,7 +58,240 @@
     </aside>
 
     <main class="main-content">
-        <h1>Home Page</h1>
+        <div class="main-container">
+            <!-- Navigation Bar -->
+            <div class="navigation-bar">
+                <nav>
+                    <div class="navigation-bar__left">
+                        <button class="btn">Live Score</button>
+                        <button class="btn">Shop</button>
+                        <button class="btn">Schedules</button>
+                    </div>
+                    <div>
+                        <div class="search-container">
+                            <input type="text" name="text" class="search-input" placeholder="Search...">
+                            <span class="search-icon">
+                                <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
+                                            stroke="#000" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                        </path>
+                                        <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="navigation-bar__right">
+                        <button class="notification-btn">
+                            <svg viewBox="0 0 448 512" class="bell">
+                                <path
+                                    d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z">
+                                </path>
+                            </svg>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="profile-avatar">
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Football Match Board -->
+            <div class="match-board">
+                <div class="match-board__header">
+                    <h1>Today Match</h1>
+                    <div class="match-board__btns">
+                        <button class="btn">Add Reminder</button>
+                        <button class="btn">Check Info</button>
+                    </div>
+                </div>
+                <div class="match-info">
+                    <div class="team">
+                        <img src="./images/football/fbc.png" alt="FBC Logo">
+                        <h2>FBC</h2>
+                    </div>
+                    <div class="match-details">
+                        <p>Friendly Match</p>
+                        <p>Time: 4:00 PM</p>
+                        <p class="vs">VS</p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28"
+                                color="#ffffff" fill="none">
+                                <path
+                                    d="M15 9.5C15 11.1569 13.6569 12.5 12 12.5C10.3431 12.5 9 11.1569 9 9.5C9 7.84315 10.3431 6.5 12 6.5C13.6569 6.5 15 7.84315 15 9.5Z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <path
+                                    d="M12 2C16.0588 2 19.5 5.42803 19.5 9.5869C19.5 13.812 16.0028 16.777 12.7725 18.7932C12.5371 18.9287 12.2709 19 12 19C11.7291 19 11.4629 18.9287 11.2275 18.7932C8.00325 16.7573 4.5 13.8266 4.5 9.5869C4.5 5.42803 7.9412 2 12 2Z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <path d="M18 20C18 21.1046 15.3137 22 12 22C8.68629 22 6 21.1046 6 20"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            At Soccer Field of RUPP
+                        </p>
+                        <p>No Tickets</p>
+                    </div>
+                    <div class="team">
+                        <img src="./images/football/mudi.png" alt="MUDI Logo">
+                        <h2>MUDI</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promotion Product Card -->
+            <h1>Promotion</h1>
+            <div class="promotion-product-card-container">
+                <!-- Promotion Product Card 01 -->
+                <div class="promotion-card">
+                    <div class="promotion-card__img">
+                        <img src="http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png"
+                            alt="nike-air-shoe">
+                    </div>
+                    <div class="promotion-card__content">
+                        <h2>Nike Shoes</h2>
+                        <div class="promotion-card__price">
+                            <span class="original-price">$200</span>
+                            <span class="discounted-price">$150</span>
+                        </div>
+                        <div class="promotion-card__size">
+                            <h3>Size :</h3>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <div class="promotion-card__color">
+                            <h3>Color :</h3>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+                <!-- Promotion Product Card 02 -->
+                <div class="promotion-card">
+                    <div class="promotion-card__img">
+                        <img src="./images/shoes/shoes.png" alt="nike-air-shoe">
+                    </div>
+                    <div class="promotion-card__content">
+                        <h2>Nike Shoes</h2>
+                        <div class="promotion-card__price">
+                            <span class="original-price">$300</span>
+                            <span class="discounted-price">$265.54</span>
+                        </div>
+                        <div class="promotion-card__size">
+                            <h3>Size :</h3>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <div class="promotion-card__color">
+                            <h3>Color :</h3>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+                <!-- Promotion Product Card 03 -->
+                <div class="promotion-card">
+                    <div class="promotion-card__img">
+                        <img src="./images/shoes/shoes-01.png" alt="nike-air-shoe">
+                    </div>
+                    <div class="promotion-card__content">
+                        <h2>Nike Shoes</h2>
+                        <div class="promotion-card__price">
+                            <span class="original-price">$500</span>
+                            <span class="discounted-price">$452.36</span>
+                        </div>
+                        <div class="promotion-card__size">
+                            <h3>Size :</h3>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <div class="promotion-card__color">
+                            <h3>Color :</h3>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Match Result Scoreboard -->
+            <h1>Match Result</h1>
+            <div class="scoreboard">
+                <div class="scoreboard__match-card">
+                    <div class="scoreboard__team">
+                        <img src="./images/football-logo/paris.svg" alt="Football FC Logo">
+                        <h2>Paris Saint-Germain F.C.</h2>
+                    </div>
+                    <div class="scoreboard__score-container">
+                        <p>Full Time</p>
+                        <div class="scoreboard__score">
+                            <span>2</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </div>
+
+                        <p class="match-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26"
+                                color="#fff" fill="none">
+                                <path
+                                    d="M15 9.5C15 11.1569 13.6569 12.5 12 12.5C10.3431 12.5 9 11.1569 9 9.5C9 7.84315 10.3431 6.5 12 6.5C13.6569 6.5 15 7.84315 15 9.5Z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <path
+                                    d="M12 2C16.0588 2 19.5 5.42803 19.5 9.5869C19.5 13.812 16.0028 16.777 12.7725 18.7932C12.5371 18.9287 12.2709 19 12 19C11.7291 19 11.4629 18.9287 11.2275 18.7932C8.00325 16.7573 4.5 13.8266 4.5 9.5869C4.5 5.42803 7.9412 2 12 2Z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <path d="M18 20C18 21.1046 15.3137 22 12 22C8.68629 22 6 21.1046 6 20"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            At Parc des Princes, Paris
+                        </p>
+                        <p class="match-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26"
+                                color="#fff" fill="none">
+                                <path d="M18 2V4M6 2V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11.9955 13H12.0045M11.9955 17H12.0045M15.991 13H16M8 13H8.00897M8 17H8.00897"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3.5 8H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M2.5 12.2432C2.5 7.88594 2.5 5.70728 3.75212 4.35364C5.00424 3 7.01949 3 11.05 3H12.95C16.9805 3 18.9958 3 20.2479 4.35364C21.5 5.70728 21.5 7.88594 21.5 12.2432V12.7568C21.5 17.1141 21.5 19.2927 20.2479 20.6464C18.9958 22 16.9805 22 12.95 22H11.05C7.01949 22 5.00424 22 3.75212 20.6464C2.5 19.2927 2.5 17.1141 2.5 12.7568V12.2432Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3 8H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            15 April 2024
+                        </p>
+                    </div>
+                    <div class="scoreboard__team">
+                        <img src="./images/football-logo/chelsea.png" alt="1910.FC Logo">
+                        <h2>Chelsea F.C.</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
 </body>
 
